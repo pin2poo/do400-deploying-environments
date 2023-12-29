@@ -27,7 +27,7 @@ pipeline {
                     -Dextensions="kubernetes,container-image-jib"
                 '''
                 sh '''
-                    ./mvwn package -DskipTests \
+                    ./mvnw package -DskipTests \
                     -Dquarkus.jib.base-jvm-image=quay.io/redhattraining/do400-java-alpine-openjdk-jre:latest \
                     -Dquarkus.container-image.build=true \
                     -Dquarkus.container-image.registry=quay.io \
